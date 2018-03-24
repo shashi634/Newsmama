@@ -42,7 +42,7 @@
               </div>
             </div><!-- /.col -->
             <div class="col-xs-4">
-             <asp:Button ID="Button1" runat="server" Text="Sign In" class="btn btn-primary btn-block btn-flat"  />
+             <asp:Button ID="Button1" runat="server" Text="Sign In" class="btn btn-primary btn-block btn-flat" OnClick="Button1_Click"  />
             </div><!-- /.col -->
           </div>
 

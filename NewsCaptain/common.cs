@@ -32,17 +32,29 @@ namespace NewsCaptain
 
             set { _isAdminAuthorised = value; }
         }
-        private bool _isSubAdminAuthorised = false;
+        private bool _isEditorAuthorised = false;
 
-        protected bool IsSubAdminLoggedIn
+        protected bool IsEditorLoggedIn
         {
             get
             {
-                _isSubAdminAuthorised = Session["SubAdminUser"] != null;
-                return _isSubAdminAuthorised;
+                _isEditorAuthorised = Session["EditorUser"] != null;
+                return _isEditorAuthorised;
             }
 
-            set { _isSubAdminAuthorised = value; }
+            set { _isEditorAuthorised = value; }
+        }
+        private bool _isWriterAuthorised = false;
+
+        protected bool IsWriterLoggedIn
+        {
+            get
+            {
+                _isWriterAuthorised = Session["WriterUser"] != null;
+                return _isWriterAuthorised;
+            }
+
+            set { _isWriterAuthorised = value; }
         }
 
         public DataTable GetData(string query)
